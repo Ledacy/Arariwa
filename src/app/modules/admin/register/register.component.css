@@ -1,0 +1,29 @@
+.tarjeta{
+  border-radius: 0px;
+  font-family: texto;
+}
+.tarjeta .card-header{
+  padding: 6px 5px;
+  /* background-color: #150846; */
+  color: #150846;
+  /* color: #F5100E; */
+  border-radius: 0px;
+  border: 0;
+  background-color: #ebeceeec;
+}
+.tarjeta .card-body{
+  color: #150846;
+  font-weight: bold;
+  background-color: white;
+}
+.menu-admin{
+  line-height: 100%;
+  font-family: texto;
+  font-weight: bold;
+}
+.divisor{
+  height: 3px !important;
+  border-radius: 0;
+  border: none;
+  background-color: #150846;
+}

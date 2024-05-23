@@ -1,0 +1,36 @@
+.arrow-1 {
+  width:100%;
+  height:40px;
+  display: flex;
+}
+.arrow-1:before {
+  content: "";
+  background: #005A94;
+  width:50%;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation: a1 3s infinite linear;
+}
+@media only screen and (min-width: 310px) and (max-width: 768px){
+  .arrow-1 {
+    width:100%;
+    height:30px;
+    display: flex;
+  }
+}
+@keyframes a1 {
+  90%,100%{flex-grow: 1}
+}
+.border-ci{
+  border-right: solid 3px #005A94;
+  }
+  .listas{
+    font-size: 18px !important;
+  }
+  .listas div ul li{
+    color: #D6261D;
+  }
+  .listas div ul li span{
+    color: #00295F;
+    font-family: texto;
+    font-weight: bolder;
+  }

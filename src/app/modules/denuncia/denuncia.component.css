@@ -1,0 +1,60 @@
+.lista{
+  list-style-type: circle;
+  font-family: texto;
+  font-weight: bold;
+  color: #00295f;
+}
+.lista li span{
+  color: #D6261D !important;
+  font-family: texto;
+  font-weight: bold;
+}
+.form-q{
+  align-items: center;
+  text-align: start;
+}
+.form-q label{
+  font-family: texto;
+  margin-left: 1%;
+  margin-bottom: -5px;
+  font-weight: bold;
+  color: #D6261D;
+}
+.form-q select{
+  margin-bottom: 2px;
+  border-radius: 0;
+  border: solid #00295f 2px;
+  font-family: texto;
+  color: #00295f;
+  height: 31px;
+}
+.form-q input{
+  margin-bottom: 2px;
+  border-radius: 0;
+  font-family: texto;
+  border: solid #00295f 2px;
+  color: #00295f;
+  height: 31px;
+  text-align: center;
+}
+.form-q textarea{
+  border-radius: 0;
+  font-family: texto;
+  font-weight: bold;
+  color: #00295f;
+  border: solid #00295f 2px;
+}
+.form-q button{
+  border-radius: 0;
+  margin-top: 10%;
+  padding: 5px 40px;
+  font-family: texto;
+  font-weight: bold;
+  color: white;
+  background-color: #00295f;
+  border: 0px;
+}
+.texto-borde {
+  /* -webkit-text-stroke: 1px white; */
+  color: #D6261D;
+}

@@ -1,0 +1,98 @@
+/* estilos para la sección de impactos */
+.dl-blurbs {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .dl-blurbs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+/* LIST */
+/* .truncate-p {
+  width: 450px;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.truncate-p:hover{
+  overflow: visible;
+  white-space: normal;
+} */
+dl {
+  counter-reset: count;
+  background: linear-gradient(
+    90deg,
+    rgba(214, 38, 29, 0.07) 15%,
+    rgba(255, 255, 255, 0) 0%
+  );
+  padding-left: 5vw;
+  padding-right: 5vw;
+  margin: 0;
+}
+@media (max-width: 575px) {
+  dl {
+    padding-left: 2vw;
+  }
+}
+@media (min-width: 568px) and (max-width: 991px) {
+  dl {
+    padding-left: 1.5vw;
+  }
+}
+@media (min-width: 1024px) {
+  dl {
+    padding-top: 3vw;
+    padding-bottom: 1vw;
+  }
+}
+dl + dl {
+  counter-reset: counter 4;
+}
+dt {
+  counter-increment: count;
+  width: 100%;
+  word-break: break-all;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #00295f;
+  line-height: 115%;
+  font-family: titulo;
+  justify-content: start;
+  font-size: 1.8vw;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 575px) {
+  dt {
+    line-height: 150%;
+    font-family: titulo;
+    justify-content: start;
+    font-size: 5.5vw;
+    text-transform: uppercase;
+  }
+}
+dt::before {
+  content: counter(count, decimal-leading-zero) ".";
+  font-family: "Abril Fatface", cursive;
+  color: #d6261d;
+  margin-left: -1vw;
+  padding-right: 12px;
+}
+
+dt:hover{
+  overflow: visible;
+  white-space: normal;
+}
+
+dd {
+  font-family: texto;
+  color: #00295f;
+  font-weight: bold;
+  line-height: 100%;
+  text-align: justify;
+  margin-left: 5vw;
+  margin-bottom: 3vh;
+}
+/* Estilos para la vista de los tours */

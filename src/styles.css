@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: titulo;
+  src: url(../src/assets/fonts/titulo.otf);
+}
+@font-face {
+  font-family: texto;
+  src: url(../src/assets/fonts/subtitulo.otf);
+}
+.titulo{
+  font-family: titulo !important;
+}
+.texto{
+  font-family: texto !important;
+}
+.text-justify{
+  text-align: justify !important;
+}
+.txt-azul{
+  color: #00295F !important;
+}
+.txt-rojo{
+  color: #D6261D !important;
+}
+.txt-celeste{
+  color: #005A94 !important;
+}
+.txt-morado{
+  color: #C52B5D !important;
+}
+.bg-azul{
+  background-color: #29156E !important;
+  background-size: cover;
+}
+.bg-rojo{
+  background-color: #F5100E;
+  background-size: cover;
+}
+.bg-metal{
+  background-color: #005A94 !important;
+  background-size: cover;
+}
+.mnt-1{
+  margin-top: -5px !important;
+}
+.mnt-2{
+  margin-top: -10px !important;
+}
+.mnt-3{
+  margin-top: -15px;
+}
+.mnb-1{
+  margin-bottom: 5px;
+}
+.mnb-2{
+  margin-bottom: -10px;
+}
+.flecha {
+  /* duplicate the triange */
+  position: relative;
+  margin-bottom: -35px;
+  height: 0px;
+  width: 0px;
+  border: 15px solid;
+  border-color: #d6261d #d6261d transparent transparent;
+  transform: rotate(45deg);
+}
+@media only screen and (min-width: 310px) and (max-width: 768px){
+  .flecha {
+    position: relative;
+    margin-bottom: -22px;
+    height: 0px;
+    width: 0px;
+    border: 10px solid;
+    border-color: #d6261d #d6261d transparent transparent;
+    transform: rotate(45deg);
+  }
+}
+.fondo-azul {
+  background-color: #0f0c29;
+  background-position: center;
+  background-size: cover;
+}
+/* marca de agua ejemplo */
+.marca-de-agua {
+  background-image: url("../src/assets/images/recursos/agua.png");
+  background-repeat: no-repeat;
+  /* background-position: right; */
+  background-position: bottom -10px right -10px;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+.marca-de-agua .img-agua {
+  padding: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+  /* background-position: bottom 10px right 10px; */
+}
+.marca-de-agua .img-agua:hover {
+  opacity: 1;
+  -webkit-transition: 1s;
+          transition: 1s;
+}

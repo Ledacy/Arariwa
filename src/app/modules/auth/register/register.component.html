@@ -1,0 +1,60 @@
+<section class="container-fluid py-5 fondo-azul">
+  <!-- Sección de registro de usuarios -->
+  <div class="container bg-login">
+    <div class="row fondo-login d-flex align-items-center">
+      <nav class="nav ps-1 menu-login">
+        <a class="nav-link" [routerLink]="['/home']">Home</a>
+        <a class="nav-link" [routerLink]="['/auth/login']">Ingresar</a>
+      </nav>
+      <div class="col-md-7 col-12 px-0 mt-md-0 mt-2">
+        <div class="container px-md-5 px-1 text-start">
+          <img src="/assets/images/general/logo-2.png" class="img-fluid mb-md-2 mb-3" alt="">
+          <h3 class="titulo fw-bold text-md-start text-center mb-1 text-white">REGISTRAR NUEVO USUARIO</h3>
+          <p class="mb-1 lh-sm texto text-white text-justify">Ingrese los campos necesarios para poder crear un perfil de usuario en nuestra plataforma Web de consultas.</p>
+          <form class="row g-3 register mt-1">
+            <div class="col-md-6 col-12">
+              <!-- <label for="c-mail" class="visually-hidden">Nombre</label> -->
+              <input name="name" class="form-control" placeholder="Nombre completo" [(ngModel)]="name">
+            </div>
+            <div class="col-md-6 col-12">
+              <!-- <label for="surname" class="visually-hidden">Apellidos</label> -->
+              <input name="surname" type="text" class="form-control" placeholder="Apellidos" [(ngModel)]="surname">
+            </div>
+            <!-- <hr class="mb-0 mt-2 text-white"> -->
+            <div class="col-12">
+              <!-- <label for="c-mail" class="visually-hidden">Email</label> -->
+              <input name="email" class="form-control" placeholder="Correo electrónico" [(ngModel)]="email_register">
+            </div>
+            <div class="col-md-6 col-12">
+              <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
+              <input name="password" type="password" class="form-control" placeholder="Password" [(ngModel)]="password_register">
+            </div>
+            <div class="col-md-6 col-12">
+              <!-- <label for="inputPassword2" class="visually-hidden">Password</label> -->
+              <input name="password_confirmation" type="password" class="form-control" placeholder="Confirmar password" [(ngModel)]="password_confirmation">
+            </div>
+          </form>
+          <div class="d-flex mt-2 px-1">
+            <!-- <div class="py-2 text-white">
+              <a href="#"  class="registrar">Registrar</a>
+            </div> -->
+          </div>
+          <div class="px-1 mt-2 text-md-end text-center">
+            <button type="button" onclick="return false" (click)="register()" class="btn btn-ingresar btn-sm">Registrar</button>
+            <div class="mt-2">
+              <nav class="nav justify-content-center icon-login">
+                <a class="nav-link" href="https://www.facebook.com/profile.php?id=100068775446452" target="_blank"><i class="bi bi-facebook"></i></a>
+                <a class="nav-link" href="#"><i class="bi bi-youtube"></i></a>
+                <a class="nav-link" href="#"><i class="bi bi-instagram"></i></a>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <p class="text-white"></p>
+      </div>
+      <div class="col-md-5 col-12 px-0 text-center">
+        <img src="/assets/images/general/pueblos.png" class="img-fluid bordes" alt="">
+      </div>
+    </div>
+  </div>
+</section>

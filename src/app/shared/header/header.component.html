@@ -1,0 +1,349 @@
+<header class="container-fluid px-0">
+  <div class="row py-0 d-flex justify-content-center align-items-center mb-0 mx-0 pt-xxl-2 pt-sm-1">
+    <div class="col-sm-3 col-md-4 text-center d-none d-md-block pb-1">
+      <img src="/assets/images/galery/chanchita.png" class="img-fluid" alt="">
+    </div>
+    <div class="col-sm-auto col-md-4 text-center align-items-center">
+      <a [routerLink]="['/']"><img src="/assets/images/general/logo.png" class="img-fluid" alt=""></a>
+    </div>
+    <div class="col-sm-12 col-md-4">
+      <div class="container d-none d-md-block py-0">
+        <div class="row d-flex align-items-center">
+          <div class="col-2 d-lg-block d-none">
+          </div>
+          <div class="col-lg-7 col-9 intranet">
+            <!-- <h5 class="text-center titulo txt-rojo my-0">INTRANET</h5> -->
+            <a class="nav-link px-1 d-md-block d-none texto fw-bold txt-azul mb-0 mnt-2"
+            href="https://www.arariwa-microfinanzas.org.pe/cuenta_interna/" target="_blank"><i
+              class="bi bi-piggy-bank fw-bold txt-rojo me-2 fs-4" style="margin-bottom: -5px;"></i><span>Cuenta interna</span></a>
+            <a class="nav-link px-1 d-md-block d-none texto fw-bold txt-azul mnt-1"
+            href="https://programacion.arariwa-microfinanzas.org.pe/login.php" target="_blank"><i
+              class="bi bi-activity txt-rojo me-2 fs-4"></i><span>Programación Actividades</span></a>
+          </div>
+          <div class="col-3 d-flex justify-content-end">
+            <nav class="nav flex-column">
+              <a class="nav-link my-0 py-0" href="https://www.facebook.com/profile.php?id=100068775446452"
+                target="_blank"><i class="bi bi-facebook fs-5 txt-azul text-center"></i></a>
+              <a class="nav-link my-0 py-0" href="#"><i class="bi bi-instagram fs-5 txt-morado text-center"></i></a>
+              <a class="nav-link my-0 py-0" href="#"><i class="bi bi-youtube fs-5 txt-rojo text-center"></i></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="container d-block d-md-none py-0">
+        <nav class="nav d-flex justify-content-center">
+          <a class="nav-link my-0 py-0" href="https://www.facebook.com/profile.php?id=100068775446452"
+            target="_blank"><i class="bi bi-facebook fs-3 txt-azul text-center"></i></a>
+          <a class="nav-link my-0 py-0" href="#"><i class="bi bi-instagram fs-3 txt-morado text-center"></i></a>
+          <a class="nav-link my-0 py-0" href="#"><i class="bi bi-youtube fs-3 txt-rojo text-center"></i></a>
+        </nav>
+      </div>
+    </div>
+    <div class="col-12 px-0">
+      <nav *ngIf="!ReclamoPage && !HeaderLogin" class="navbar navbar-expand-md bg-body-tertiary p-0">
+        <div [ngClass]="{'bg-azul': !ReclamoPage, 'bg-white': ReclamoPage}"
+          class="container-fluid py-md-0 py-1 px-md-0 px-3">
+          <a class="navbar-brand d-md-none d-block px-md-1 px-3" [routerLink]="['/inicio']"
+            routerLinkActive="active"><img src="/assets/images/recursos/Arariwa.png" class="img-fluid mnt-1" alt=""></a>
+          <button class="navbar-toggler collapsed bg-white" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div *ngIf="!ReclamoPage && !HeaderLogin" class="navbar-collapse collapse" id="navbarNavDropdown">
+            <div class="container menu">
+              <ul class="navbar-nav nav d-flex justify-content-md-around mt-md-0 mt-1">
+                <li class="nav-item d-none d-md-block">
+                  <a class="nav-link" aria-current="page" [routerLink]="['/home']" (click)="movePage(target)"
+                    routerLinkActive="active">HOME</a>
+                </li>
+                <li *ngIf="!ReclamoPage" class="nav-item">
+                  <a class="nav-link" [routerLink]="['/nosotros']" (click)="movePage(target)"
+                    routerLinkActive="active">NOSOTROS</a>
+                </li>
+                <li class="nav-item dropdown col-auto">
+                  <a class="nav-link dropdown-toggle" routerLinkActive="active"
+                    role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICIOS</a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" [routerLink]="['/servicios/credito']"
+                        routerLinkActive="active2">Crédito Individual</a></li>
+                    <li><a class="dropdown-item" [routerLink]="['/servicios/banco']" routerLinkActive="active2">Bancos Comunales</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/agencias']" routerLinkActive="active">AGENCIAS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/testimonios']" routerLinkActive="active">TESTIMONIOS</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" [routerLink]="['/educacion']" (click)="movePage(target)"
+                    routerLinkActive="active">EDUCACIÓN</a>
+                </li>
+                <li *ngIf="user" class="nav-item bg-white border px-2 py-0 d-flex align-items-center" style="margin-right: -13.8%;">
+                  <div class="d-flex align-items-center">
+                    <div class="border-end text-center">
+                      <img src="/assets/images/recursos/chanchita.png" style="height: 35px !important;" class="img-fluid me-2" alt="">
+                    </div>
+                    <div class="px-1 text-start">
+                      <!-- <p class="texto fw-bold lh-1 my-0"><small>Leonel Hilari Almiron</small></p> -->
+                      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Leonel Hilari Almiron</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" [routerLink]="['/admin/listar']">Administrador</a></li>
+                        <li><a class="dropdown-item" href="#">Another</a></li>
+                        <li><a class="dropdown-item" onclick="return false;" (click)="logout()">Salir</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <nav *ngIf="ReclamoPage" class="navbar">
+            <div class="container-fluid menu-reclamos">
+              <a class="navbar-brand" href="#">Inicio</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav> -->
+        </div>
+      </nav>
+      <nav *ngIf="ReclamoPage || HeaderLogin" class="navbar border-top border-bottom border-reclamos py-1">
+        <div class="container-fluid menu-reclamos">
+          <a class="navbar-brand">
+            <img src="/assets/images/recursos/Arariwa.png" class="img-fluid" alt="">
+          </a>
+          <a [routerLink]="['/']" class="navbar-brand">Inicio</a>
+          <div class="d-flex">
+            <button onclick="return false;" class="nav-link" (click)="logout()"
+              class="navbar-brand btn-salir">Salir</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- !seccion del carrousel -->
+  <section class="container-fluid p-0 mt-0">
+    <div *ngIf="!AgenciaPage && !TestimoniosPage && !ReclamoPage && !EdcuacionPage && !HeaderLogin" id="carouselExampleFade"
+      class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/assets/images/recursos/arariwa-1.gif" class="d-block w-100 img-fluid" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/recursos/arariwa-2.gif" class="d-block w-100 img-fluid" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/assets/images/recursos/arariwa-3.gif" class="d-block w-100 img-fluid" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div *ngIf="TestimoniosPage" class="container-fluid px-0">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade testimonios" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/images/general/carrousel-1.jpg" class="d-block d-none d-md-block" alt="...">
+            <img src="/assets/images/general/carrousel-1R.jpg" class="d-block d-block d-md-none" alt="...">
+            <!-- <div class="carousel-caption d-none d-md-block text-cemter">
+              <h5 class="titulo mb-1 d-none d-lg-block">Lorem, ipsum dolor.</h5>
+              <p class="titulo mb-1 d-block d-lg-none" style="font-size: 12px;">Lorem, ipsum dolor.</p>
+              <p class="texto lh-1"><span class="d-none d-lg-block mb-0">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</span>
+                <small class="d-block d-lg-none" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</small>
+              </p>
+            </div> -->
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/images/general/carrousel-2.jpg" class="d-block d-none d-md-block" alt="...">
+            <img src="/assets/images/general/carrousel-2R.jpg" class="d-block d-block d-md-none" alt="...">
+            <!-- <div class="carousel-caption d-none d-md-block">
+              <h5 class="titulo mb-1 d-none d-lg-block">Lorem, ipsum dolor.</h5>
+              <p class="titulo mb-1 d-block d-lg-none" style="font-size: 12px;">Lorem, ipsum dolor.</p>
+              <p class="texto lh-1"><span class="d-none d-lg-block mb-0">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</span>
+                <small class="d-block d-lg-none" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</small>
+              </p>
+            </div> -->
+          </div>
+          <div class="carousel-item">
+            <img src="/assets/images/general/carrousel-3.jpg" class="d-block d-none d-md-block" alt="...">
+            <img src="/assets/images/general/carrousel-3R.jpg" class="d-block d-block d-md-none" alt="...">
+            <!-- <div class="carousel-caption d-none d-md-block">
+              <h5 class="titulo mb-1 d-none d-lg-block">Lorem, ipsum dolor.</h5>
+              <p class="titulo mb-1 d-block d-lg-none" style="font-size: 12px;">Lorem, ipsum dolor.</p>
+              <p class="texto lh-1"><span class="d-none d-lg-block mb-0">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</span>
+                <small class="d-block d-lg-none" style="font-size: 12px;">Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit. Ad porro repellat rem labore
+                  assumenda quaerat!</small>
+              </p>
+            </div> -->
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- !sección de educación financiera -->
+    <div *ngIf="EdcuacionPage" class="container-fluid px-0">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade testimonios" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="/assets/images/recursos/educacion-financiera.jpg" class="d-block" alt="...">
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="../../assets/image/carrousel-2.jpg" class="d-block" alt="...">
+          </div> -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- !sección de los reclamos -->
+    <div *ngIf="ReclamoPage || HeaderLogin" class="container-fluid px-0 text-end">
+      <div class="row mx-0">
+        <div class="col-12 px-0">
+          <div id="carouselExampleSlidesOnly" class="carousel slide testimonios" data-bs-ride="carousel">
+            <div class="carousel-inner" style="z-index: -1 !important;">
+              <div class="carousel-item active">
+                <img src="/assets/images/general/carrousel-1.jpg" class="d-block" alt="...">
+              </div>
+              <div class="carousel-item" style="z-index: -1 !important;">
+                <img src="/assets/images/general/carrousel-1.jpg" class="d-block" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 col-lg-2 offset-lg-10 col-3 offset-9 panel-admin d-none d-md-block">
+          <div class="row mx-0 border-admin d-flex align-items-center fondo-admin">
+            <div class="col-4 px-0">
+              <img src="/assets/images/recursos/chanchita.png" class="img-fluid px-1 py-1" alt="">
+            </div>
+            <div class="col-8 divisor text-start">
+              <p class="lh-1 mb-0 texto fw-bold"><small>Leonel Hilari Almiron</small></p>
+              <a [routerLink]="['/admin/listar']" role="button" class="mtn-1"><small>Administrador</small></a>
+            </div>
+          </div>
+        </div>
+        <!-- <div *ngIf="!HeaderLogin" class="col-2 px-2 offset-10 panel-admin">
+          <div class="row mx-0 border-admin d-flex align-items-center fondo-admin">
+            <div class="col-4 px-0">
+              <img src="/assets/images/recursos/chanchita.png" class="img-fluid px-1 py-1" alt="">
+            </div>
+            <div class="col-8 divisor text-start">
+              <p class="lh-1 mb-0 texto fw-bold"><small>Janiel Hilari Almiron</small></p>
+              <a [routerLink]="['/admin/listar']" role="button" class="mtn-1"><small>Administrador</small></a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <!-- <button type="button" class="btn btn-admin me-2">Danger</button> -->
+    </div>
+    <!-- !sección de lugares -->
+    <div *ngIf="AgenciaPage" class="container-fluid px-0 testimonio">
+      <div id="testimonios">
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(/assets/images/recursos/paucartambo.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h2 class="title" data-title="Paucartambo">Paucartambo</h2>
+            <div class="emblem"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/italian-emblem.svg);">
+            </div>
+            <ul class="city-info">
+              <li class="country">Country: Lorem ipsum dolor sit amet.</li>
+              <li class="founded">Founded: 6971252</li>
+              <li class="population">Population: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia, at?
+              </li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(/assets/images/recursos/quillabamba.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h2 class="title" data-title="Quillabamba">Quillabamba</h2>
+            <div class="emblem"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/french-emblem.svg);">
+            </div>
+            <ul class="city-info">
+              <li class="country">Country: France</li>
+              <li class="founded">Founded: ~250BC</li>
+              <li class="population">Population: 2.2 Million</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(/assets/images/recursos/sicuani.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h2 class="title" data-title="Sicuani">Sicuani</h2>
+            <div class="emblem"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/austrian-emblem.svg);">
+            </div>
+            <ul class="city-info">
+              <li class="country">Country: Austria</li>
+              <li class="founded">Founded: 1622</li>
+              <li class="population">Population: 145,871</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+        <div class="slide anim-in">
+          <div class="image" style="background-image: url(/assets/images/recursos/urcos.jpg);"></div>
+          <div class="overlay"></div>
+          <div class="content">
+            <h2 class="title" data-title="Urcos">Urcos</h2>
+            <div class="emblem"
+              style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/544318/czech-emblem.svg);">
+            </div>
+            <ul class="city-info">
+              <li class="country">Country: Czech Republic</li>
+              <li class="founded">Founded: 870</li>
+              <li class="population">Population: 1.2 Million</li>
+            </ul>
+          </div>
+          <div class="btn-close"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div #target></div>
+</header>

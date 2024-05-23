@@ -1,0 +1,107 @@
+.arrow-1 {
+  width:100%;
+  height:40px;
+  display: flex;
+}
+.arrow-1:before {
+  content: "";
+  background: #005A94;
+  width:50%;
+  clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+  animation: a1 3s infinite linear;
+}
+@keyframes a1 {
+  90%,100%{flex-grow: 1}
+}
+@media only screen and (min-width: 310px) and (max-width: 768px){
+  .arrow-1 {
+    width:100%;
+    height:30px;
+    display: flex;
+  }
+}
+.border-bc{
+border-right: solid 3px #005A94;
+}
+@media only screen and (max-width: 575px) {
+  .border-bc{
+    border-right: none;
+    }
+}
+.listas{
+  font-size: 18px !important;
+}
+.listas div ul li{
+  color: #D6261D;
+}
+.listas div ul li span{
+  color: #00295F;
+  font-family: texto;
+  font-weight: bolder;
+}
+/* estilos para la sección de impactos */
+.dl-blurbs {
+  display: grid;
+}
+@media (min-width: 768px) {
+  .dl-blurbs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2vw;
+  }
+}
+/* LIST */
+dl {
+  counter-reset: count;
+  background: linear-gradient(90deg, rgba(214, 38, 29, 0.07) 20%, rgba(255, 255, 255, 0) 0%);
+  padding-left: 4vw;
+  padding-right: 4vw;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  dl {
+    padding-left: 2vw;
+  }
+}
+@media (min-width: 1024px) {
+  dl {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+  }
+}
+dl + dl {
+  counter-reset: counter 4;
+}
+dt {
+  counter-increment: count;
+  color: #00295F;
+  font-family: titulo;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+}
+
+dt::before {
+  content: counter(count, decimal-leading-zero) ".";
+  font-family: "Abril Fatface", cursive;
+  color: #D6261D;
+  margin-left: -1vw;
+  padding-right: 12px;
+}
+
+dd {
+  font-family: texto;
+  color: #00295F;
+  font-weight: bold;
+  line-height: 100%;
+  text-align: justify;
+  margin-left: 5vw;
+  margin-bottom: 2vh;
+}
+.lista div h5{
+  font-family: titulo;
+  text-align: center;
+  color: #D6261D;
+}
+/* .lista div ul li{
+  list-style: outside;
+  font-family: texto;
+} */

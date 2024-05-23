@@ -1,0 +1,122 @@
+<app-header [ReclamoPage]='true'></app-header>
+<section class="container pt-3">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 col-12">
+      <p class="texto lh-sm txt-azul fw-bold text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus quod
+        tempore deserunt, hic porro ea itaque expedita quisquam, modi nesciunt consequatur eius rerum tempora
+        perferendis. Cum quas explicabo perspiciatis rem.</p>
+    </div>
+  </div>
+</section>
+<article class="container-fluid">
+  <div class="row mx-0 mb-5">
+    <div class="col-md-6 offset-md-3 col-12 py-0">
+      <h3 class="text-center titulo texto-borde ">Registro de Denuncias</h3>
+      <div class="row mx-0 bg-white py-4 container border border-danger-subtle border-2">
+        <div class="col-12 my-1">
+          <p class="mb-0 titulo border-bottom bg-white border-danger-subtle border-2">DATOS DE LA PERSONA QUE FORMULA LA
+            QUEJA</p>
+          <div class="row d-flex align-items-center">
+            <div class="col-6 form-q">
+              <label for="doc" class="form-label">Tipo de documento</label>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm" id="doc">
+                <option value="1">DNI</option>
+                <option value="2">RUC</option>
+                <option value="3">Carnet de extranjería</option>
+                <option value="4">Pasaporte</option>
+              </select>
+            </div>
+            <div class="col-6 form-q">
+              <label for="doc" class="form-label d-md-none d-block">Documento</label>
+              <label for="doc" class="form-label d-md-block d-none">Numero de Documento</label>
+              <input type="text" class="form-control" placeholder="Numero de documento" aria-label="number doc"
+                id="doc">
+            </div>
+            <div class="col-12 form-q">
+              <label for="name" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" placeholder="Nombres y Apellidos" aria-label="Name" id="name">
+            </div>
+            <div class="col-6 form-q">
+              <label for="direccion" class="form-label">Dirección</label>
+              <input type="text" class="form-control" placeholder="Ej. Jiron abc J-0" aria-label="direccion"
+                id="direccion">
+            </div>
+            <div class="col-6 form-q">
+              <label for="phone" class="form-label">Celular</label>
+              <input type="phone" class="form-control" placeholder="Numero de contacto" aria-label="phone"
+                id="direccion">
+            </div>
+            <div class="col-6 form-q">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" placeholder="ejemplo@email.com" aria-label="email" id="email">
+            </div>
+            <div class="col-6 form-q">
+              <label for="phone" class="form-label">Fecha</label>
+              <input type="datetime-local" class="form-control" placeholder="Donde radica" aria-label="phone"
+                id="direccion">
+            </div>
+          </div>
+        </div>
+        <div class="col-8 offset-2 form-q my-2 text-center">
+          <label for="doc" class="form-label">Agencia en la Cual sucedió el motivo de la Queja</label>
+          <select class="form-select form-select-sm text-center" aria-label=".form-select-sm" id="doc">
+            <option value="1">Cusco</option>
+            <option value="2">Sicuani</option>
+            <option value="3">Quillabamba</option>
+            <option value="4">Paucartambo</option>
+          </select>
+        </div>
+        <div class="col-12 my-1">
+          <p class="mb-0 titulo border-bottom border-danger-subtle border-2">DATOS DE LA PERSONA CONTRA LA QUE SE
+            FORMULA LA QUEJA</p>
+          <div class="row">
+            <div class="col-6 form-q">
+              <label for="q-name" class="form-label">Nombre del Quejado</label>
+              <input type="name" class="form-control" aria-label="name" id="q-name">
+            </div>
+            <div class="col-6 form-q">
+              <label for="q-apellido" class="form-label">Apellido del Quejado</label>
+              <input type="name" class="form-control" aria-label="q-name" id="q-apellido">
+            </div>
+            <div class="col-md-8 col-6 form-q">
+              <label for="q-cargo" class="form-label">Cargo del Quejado</label>
+              <input type="text" class="form-control" aria-label="name" id="q-cargo">
+            </div>
+            <div class="col-md-4 col-6 form-q">
+              <label for="q-hora" class="form-label">Hora del incidente</label>
+              <input type="time" class="form-control" aria-label="name" id="q-hora">
+            </div>
+          </div>
+        </div>
+        <div class="col-12 my-1">
+          <p class="mb-0 titulo border-bottom border-danger-subtle border-2">RELACION DE LOS HECHOS QUE MOTIVA LA QUEJA
+          </p>
+          <div class="row">
+            <div class="col-7 form-q">
+              <label for="motivo" class="form-label">Motivo de Queja</label>
+              <select class="form-select form-select-sm" aria-label=".form-select-sm" id="motivo">
+                <option value="1">Falta de respeto</option>
+                <option value="2">Cobro indebido</option>
+                <option value="3">Acoso sexual</option>
+                <option value="4">Aceptar sobornos</option>
+              </select>
+            </div>
+            <div class="col-5 form-q">
+              <label for="formFile" class="form-label">Información</label>
+              <input class="form-control" type="file" id="formFile">
+            </div>
+            <div class="col-12 form-q">
+              <label for="textarea">Comments</label>
+              <textarea class="form-control" placeholder="Escribe tu reclamo aquí" id="textarea"
+                style="height: 100px"></textarea>
+            </div>
+            <div class="col-md-5 col-12 form-q text-md-start text-center">
+              <button type="submit" class="btn btn-primary mb-3">Enviar queja</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+<app-footer></app-footer>

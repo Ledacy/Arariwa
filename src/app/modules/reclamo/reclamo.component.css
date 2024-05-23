@@ -1,0 +1,76 @@
+.reclamos {
+  line-height: normal;
+}
+.reclamos h4 {
+  font-family: titulo;
+  color: #d6261d;
+  font-weight: bold;
+}
+.reclamos p {
+  margin-left: 5%;
+  font-family: texto;
+  color: #00295f;
+  font-weight: bold;
+  text-align: justify;
+}
+.lista {
+  list-style-type: circle;
+  font-family: texto;
+  font-weight: bold;
+  color: #00295f;
+}
+.lista li span {
+  color: #d6261d !important;
+  font-family: texto;
+  font-weight: bold;
+}
+.form-1 {
+  align-items: center;
+  text-align: start;
+}
+.form-1 label {
+  font-family: texto;
+  margin-left: 3%;
+  margin-bottom: -5px;
+  font-weight: bold;
+  color: #d6261d;
+}
+.form-1 select {
+  margin-bottom: 2px;
+  border-radius: 0;
+  border: solid #00295f 2px;
+  font-family: texto;
+  color: #00295f;
+  height: 31px;
+}
+.form-1 input {
+  margin-bottom: 2px;
+  border-radius: 0;
+  font-family: texto;
+  border: solid #00295f 2px;
+  color: #00295f;
+  height: 31px;
+  text-align: center;
+}
+.form-1 textarea {
+  border-radius: 0;
+  font-family: texto;
+  font-weight: bold;
+  color: #00295f;
+  border: solid #00295f 2px;
+}
+.form-1 button {
+  border-radius: 0;
+  margin-top: 10%;
+  padding: 5px 40px;
+  font-family: texto;
+  font-weight: bold;
+  color: white;
+  background-color: #00295f;
+  border: 0px;
+}
+.sep {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, #ffffff, #D6261D, #e2150a, #fffcfc)
+}

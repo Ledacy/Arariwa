@@ -1,0 +1,105 @@
+.bg-blue {
+  background-color: #003149;
+}
+.tarjeta {
+  border-radius: 0px;
+  font-family: texto;
+}
+.tarjeta .card-body {
+  color: #150846;
+  padding: 1%;
+  font-weight: bold;
+  background-color: white;
+}
+.menu-admin {
+  line-height: 100%;
+  font-family: texto;
+  font-weight: bold;
+}
+.divisor {
+  height: 3px !important;
+  border-radius: 0;
+  border: none;
+  background-color: white;
+}
+.modal-1 {
+}
+.modal-1 div {
+  background-color: #003149af;
+  color: white;
+  font-family: texto;
+}
+.formulario {
+  height: auto;
+  border-radius: 0;
+}
+.etiqueta ::after {
+  color: #c52b5d !important;
+}
+.form-floating > .form-control,
+.form-floating > .form-control-plaintext,
+.form-floating > .form-select {
+  height: 10px;
+  min-height: 5px !important;
+  line-height: 1.25;
+  color: #150846;
+}
+.buscador {
+  font-family: texto;
+  font-weight: bold;
+}
+.buscador span {
+  border-radius: 25px;
+}
+.buscador input {
+  border-radius: 25px;
+}
+.vertical {
+  border: none;
+  border-left: 1px solid #ffff;
+  border-right: 1px solid #ffff;
+  /* margin-top: -1px; */
+  height: 100%;
+  width: 1px;
+}
+.accion a{
+  color: #150846;
+  font-family: texto;
+  font-weight: bold;
+  padding: 1px 10px;
+}
+.accion a:hover{
+  background-color: #150846;
+  color: white;
+  padding: 1px 10px;
+}
+.centrado-vertical{
+  display: table-cell;
+  vertical-align: middle;
+  display: grid;
+  align-items: center;
+  height: 100%;
+  background-image: url("/assets/images/recursos/Fondo-lineas.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.centrado-vertical div a{
+  background-color: white;
+  margin-top: 3px;
+  padding: 2px 4px;
+  font-family: texto;
+  color: #150846;
+  font-weight: bold;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.list{
+}
+.list li a{
+  font-family: texto;
+  color: #150846;
+}
+.list li a h5{
+  font-weight: bold;
+  margin-bottom: 0px;
+}
