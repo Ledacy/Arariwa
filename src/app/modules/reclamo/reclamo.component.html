@@ -4,194 +4,153 @@
     <div class="col-6 offset-4">
       <div class="container-fluid"></div>
     </div>
+
     <div class="col-6">
-      <h4 class="text-center titulo txt-rojo">
-        Formato de Hoja de Reclamaciones
-      </h4>
+      <h4 class="text-center titulo txt-rojo">Formato de Hoja de Reclamaciones</h4>
       <form action="https://formsubmit.co/librodereclamaciones@arariwacusco.org.pe" method="POST" class="row container">
         <div class="col-6 form-1">
-          <label for="doc" class="form-label">Tipo de documento</label>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm" id="doc">
-            <option value="1">DNI</option>
-            <option value="2">RUC</option>
-            <option value="3">Carnet de extranjería</option>
-            <option value="4">Pasaporte</option>
+          <label for="tipo_doc" class="form-label">Tipo de documento</label>
+          <select class="form-select form-select-sm" name="tipo_documento" id="tipo_doc">
+            <option value="DNI">DNI</option>
+            <option value="RUC">RUC</option>
+            <option value="Carnet de extranjería">Carnet de extranjería</option>
+            <option value="Pasaporte">Pasaporte</option>
           </select>
         </div>
+
         <div class="col-6 form-1">
-          <label for="doc" class="form-label">Numero de Documento</label>
-          <input type="text" name="dni" class="form-control" placeholder="Numero de documento" aria-label="number doc"
-            id="doc" />
+          <label for="numero_doc" class="form-label">Número de Documento</label>
+          <input type="text" name="numero_documento" class="form-control" placeholder="Número de documento" id="numero_doc" />
         </div>
+
         <div class="col-12 form-1">
           <label for="name" class="form-label">Nombre completo del Denunciante</label>
-          <input type="text" name="name" class="form-control" placeholder="Nombres y Apellidos" aria-label="Name"
-            id="name" />
+          <input type="text" name="name" class="form-control" placeholder="Nombres y Apellidos" id="name" />
         </div>
+
         <div class="col-6 form-1">
           <label for="direccion" class="form-label">Dirección</label>
-          <input type="text" name="dirección" class="form-control" placeholder="Ej. Jiron abc J-0"
-            aria-label="direccion" id="direccion" />
+          <input type="text" name="direccion" class="form-control" placeholder="Ej. Jiron abc J-0" id="direccion" />
         </div>
+
         <div class="col-6 form-1">
-          <label for="phone" class="form-label">Teléfono</label>
-          <input type="phone" name="phone" class="form-control" placeholder="Numero de contacto" aria-label="phone"
-            id="direccion" />
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input type="tel" name="telefono" class="form-control" placeholder="Número de contacto" id="telefono" />
         </div>
+
         <div class="col-6 form-1">
           <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" name="email" class="form-control" placeholder="ejemplo@email.com" aria-label="email"
-            id="email" />
+          <input type="email" name="email" class="form-control" placeholder="ejemplo@email.com" id="email" />
         </div>
+
         <div class="col-6 form-1">
-          <label for="phone" class="form-label">Fecha del incidente</label>
-          <input type="datetime-local" name="date" class="form-control" placeholder="Donde radica" aria-label="phone"
-            id="direccion" />
+          <label for="fecha_incidente" class="form-label">Fecha del incidente</label>
+          <input type="datetime-local" name="fecha_incidente" class="form-control" id="fecha_incidente" />
         </div>
+
         <div class="col-12 text-center mt-1">
           <small class="texto mt-0 txt-rojo fw-bold">Lugar del incidente</small>
           <hr class="my-0 sep" />
         </div>
+
+        <!-- ✅ Sección actualizada solo para Cusco -->
         <div class="col-4 form-1">
           <label for="departamento" class="form-label">Departamento</label>
-          <select class="form-select form-select-sm" name="agencia" aria-label="" id="departamento">
-            <option value="1">Cusco</option>
-            <option value="2">Puno</option>
+          <select class="form-select form-select-sm" name="departamento" id="departamento" disabled>
+            <option value="Cusco" selected>Cusco</option>
           </select>
         </div>
+
         <div class="col-4 form-1">
           <label for="provincia" class="form-label">Provincia</label>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm" id="provincia">
-            <option value="1">Cusco</option>
-            <option value="2">La convención</option>
-            <option value="2">Sicuani</option>
+          <select class="form-select form-select-sm" name="provincia" id="provincia">
+            <option value="Cusco">Cusco</option>
+            <option value="La Convención">La Convención</option>
+            <option value="Calca">Calca</option>
+            <option value="Canas">Canas</option>
+            <option value="Canchis">Canchis</option>
+            <option value="Chumbivilcas">Chumbivilcas</option>
+            <option value="Espinar">Espinar</option>
+            <option value="Paruro">Paruro</option>
+            <option value="Paucartambo">Paucartambo</option>
+            <option value="Quispicanchi">Quispicanchi</option>
+            <option value="Urubamba">Urubamba</option>
           </select>
         </div>
+
         <div class="col-4 form-1">
           <label for="agencia" class="form-label">Agencia</label>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm" id="agencia">
-            <option value="1">Cusco</option>
-            <option value="2">Wanchaq</option>
-            <option value="3">San jeronimo</option>
+          <select class="form-select form-select-sm" name="agencia" id="agencia">
+            <option value="Cusco Central">Cusco Central</option>
+            <option value="Wanchaq">Wanchaq</option>
+            <option value="San Jerónimo">San Jerónimo</option>
+            <option value="Santiago">Santiago</option>
+            <option value="Saylla">Saylla</option>
+            <option value="Urcos">Urcos</option>
+            <option value="Quillabamba">Quillabamba</option>
           </select>
         </div>
+
         <div class="col-12 form-1">
-          <label for="textarea">Comentarios</label>
-          <textarea class="form-control" name="comentario" placeholder="Escribe tu reclamo aquí" id="textarea"
-            style="height: 100px"></textarea>
+          <label for="comentario">Comentarios</label>
+          <textarea class="form-control" name="comentario" placeholder="Escribe tu reclamo aquí" id="comentario" style="height: 100px"></textarea>
           <input type="hidden" name="_captcha" value="false" />
         </div>
+
         <div class="col-12 text-center">
-          <small class="texto mt-0 txt-rojo fw-bold">Datos de el acusado</small>
+          <small class="texto mt-0 txt-rojo fw-bold">Datos del acusado</small>
           <hr class="my-0 sep" />
         </div>
+
         <div class="col-6 form-1">
-          <label for="name-asesor" class="form-label">Nombre del asesor</label>
-          <input type="text" name="asesor" class="form-control" placeholder="Nombre de el asesor acusado"
-            aria-label="name-asesor" id="asesor" />
+          <label for="asesor" class="form-label">Nombre del asesor</label>
+          <input type="text" name="asesor" class="form-control" placeholder="Nombre del asesor acusado" id="asesor" />
         </div>
+
         <div class="col-6 form-1">
           <label for="banco" class="form-label">Nombre del Banco</label>
-          <input type="text" name="asesor" class="form-control" placeholder="Nombre del Banco al que pertenece"
-            aria-label="banco" id="banco" />
+          <input type="text" name="banco" class="form-control" placeholder="Nombre del Banco al que pertenece" id="banco" />
         </div>
+
         <div class="col-7 form-1">
           <label for="formFile" class="form-label">Información que veas relevante al reclamo</label>
-          <input class="form-control" type="file" id="formFile" />
+          <input class="form-control" type="file" name="archivo" id="formFile" />
         </div>
+
         <div class="col-5 form-1 text-end">
-          <button type="submit" class="btn btn-primary mb-3">
-            Enviar reclamo
-          </button>
+          <button type="submit" class="btn btn-primary mb-3">Enviar reclamo</button>
         </div>
       </form>
     </div>
+
     <div class="col-6">
       <div class="container text-start reclamos">
         <p>
-          Conforme a lo estabelcido en Código de Protección al Consumidor este
-          establecimiento cuenta con un Libro de Reclamaciones Virtual a tu
-          disposición. Solicítalo para registrar una queja o reclamo.
+          Conforme a lo establecido en el Código de Protección al Consumidor, este establecimiento cuenta con un Libro de Reclamaciones Virtual a tu disposición.
         </p>
-        <h4>¿Que es un Reclamo?</h4>
+        <h4>¿Qué es un Reclamo?</h4>
         <p>
-          Es la comunicación que puedes establecer con nosotros ante una posible
-          insatisfacción o disconformidad con un producto o servicio prestado
-          por el banco, con la finalidad de que éstos sean solucionados.
+          Es la comunicación que puedes establecer con nosotros ante una posible insatisfacción con un producto o servicio prestado por el banco.
         </p>
-        <h4>¿Como registrar un reclamo?</h4>
+        <h4>¿Cómo registrar un reclamo?</h4>
         <ul class="lista">
-          <li>
-            <span>Personalmente: </span>Visitando cualquiera de nuestras
-            agencias y solicitar el libro de Reclamos de la agencia.
-          </li>
-          <li>
-            <span>A través de una carta: </span>Entregándola en cualquier
-            oficina de Arariwa.
-          </li>
-          <li>
-            <span>Teléfono: </span>Llamando a nuestro Call Center 800 xxxxx.
-          </li>
-          <li>
-            <span>Vía WEB: </span>Llenando el formulario dispuesto a
-            continuación con la opción “Libro de reclamos”.
-          </li>
+          <li><span>Personalmente:</span> Visitando cualquiera de nuestras agencias.</li>
+          <li><span>A través de una carta:</span> Entregándola en cualquier oficina de Arariwa.</li>
+          <li><span>Teléfono:</span> Llamando a nuestro Call Center 800 xxxxx.</li>
+          <li><span>Vía WEB:</span> Llenando este formulario con la opción “Libro de reclamos”.</li>
         </ul>
         <p>
-          El plazo de respuesta es de cinco (5) días hábiles; en caso de
-          requerir un plazo mayor, la institución se lo comunicará, dentro de
-          los cinco (5) días hábiles administrativos establecidos.
+          El plazo de respuesta es de cinco (5) días hábiles. En caso de requerir más tiempo, se te comunicará dentro de ese mismo plazo.
         </p>
-        <p>
-          Transcurrido el plazo la entidad tiene la obligación de tomar contacto
-          con usted de manera escrita o utilizando el mismo canal de
-          comunicación con el que presento su reclamo.
-        </p>
-        <p>La respuesta que recibirás de la institución debe ser:</p>
+        <p>La respuesta debe ser:</p>
         <ul class="lista">
-          <li><span>Expresa: </span>Mediante comunicación escrita.</li>
-          <li>
-            <span>Oportuna: </span>Se refiere al cumplimiento con el plazo
-            fijado para emitir la respuesta.
-          </li>
-          <li>
-            <span>Integra: </span>Se refiere a que la respuesta debe
-            corresponder a la verdad de los hechos, ser completa, exacta,
-            imparcial y verificable, respecto a todos los aspectos planteados en
-            el reclamo.
-          </li>
-          <li>
-            <span>Comprensible: </span>Se refiere a que la respuesta debe
-            contener toda la información que facilite el entendimiento de la
-            misma por parte del cliente.
-          </li>
+          <li><span>Expresa:</span> Mediante comunicación escrita.</li>
+          <li><span>Oportuna:</span> Dentro del plazo establecido.</li>
+          <li><span>Íntegra:</span> Veraz, completa, imparcial y verificable.</li>
+          <li><span>Comprensible:</span> Clara para el cliente.</li>
         </ul>
       </div>
     </div>
-    <!-- <div class="col-8 offset-2 mt-4">
-      <div class="card mb-3">
-        <div class="row g-0 bg-rojo d-flex align-items-center">
-          <div class="col-md-4 text-center border-end">
-            <img src="../../assets/recursos/ver-01.png" class="img-fluid" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body py-4">
-              <p class="lh-sm my-0 text-white texto fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-        <div class="row g-0 bg-rojo d-flex align-items-center mt-2">
-          <div class="col-md-4 text-center border-end">
-            <img src="../../assets/recursos/ver-01.png" class="img-fluid" alt="...">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body py-4">
-              <p class="lh-sm my-0 text-white texto fw-bold">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </section>
 <app-footer></app-footer>
