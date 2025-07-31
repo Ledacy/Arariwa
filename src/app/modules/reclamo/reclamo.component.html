@@ -20,33 +20,27 @@
         </div>
         <div class="col-6 form-1">
           <label for="doc" class="form-label">Numero de Documento</label>
-          <input type="text" name="dni" class="form-control" placeholder="Numero de documento" aria-label="number doc"
-            id="doc" />
+          <input type="text" name="dni" class="form-control" placeholder="Numero de documento" aria-label="number doc" id="doc" />
         </div>
         <div class="col-12 form-1">
           <label for="name" class="form-label">Nombre completo del Denunciante</label>
-          <input type="text" name="name" class="form-control" placeholder="Nombres y Apellidos" aria-label="Name"
-            id="name" />
+          <input type="text" name="name" class="form-control" placeholder="Nombres y Apellidos" aria-label="Name" id="name" />
         </div>
         <div class="col-6 form-1">
           <label for="direccion" class="form-label">Dirección</label>
-          <input type="text" name="dirección" class="form-control" placeholder="Ej. Jiron abc J-0"
-            aria-label="direccion" id="direccion" />
+          <input type="text" name="direccion" class="form-control" placeholder="Ej. Jiron abc J-0" aria-label="direccion" id="direccion" />
         </div>
         <div class="col-6 form-1">
           <label for="phone" class="form-label">Teléfono</label>
-          <input type="phone" name="phone" class="form-control" placeholder="Numero de contacto" aria-label="phone"
-            id="direccion" />
+          <input type="phone" name="phone" class="form-control" placeholder="Numero de contacto" aria-label="phone" id="phone" />
         </div>
         <div class="col-6 form-1">
           <label for="email" class="form-label">Correo Electrónico</label>
-          <input type="email" name="email" class="form-control" placeholder="ejemplo@email.com" aria-label="email"
-            id="email" />
+          <input type="email" name="email" class="form-control" placeholder="ejemplo@email.com" aria-label="email" id="email" />
         </div>
         <div class="col-6 form-1">
-          <label for="phone" class="form-label">Fecha del incidente</label>
-          <input type="datetime-local" name="date" class="form-control" placeholder="Donde radica" aria-label="phone"
-            id="direccion" />
+          <label for="date" class="form-label">Fecha del incidente</label>
+          <input type="datetime-local" name="date" class="form-control" placeholder="Donde radica" aria-label="date" id="date" />
         </div>
         <div class="col-12 text-center mt-1">
           <small class="texto mt-0 txt-rojo fw-bold">Lugar del incidente</small>
@@ -54,31 +48,25 @@
         </div>
         <div class="col-4 form-1">
           <label for="departamento" class="form-label">Departamento</label>
-          <select class="form-select form-select-sm" name="agencia" aria-label="" id="departamento">
-            <option value="1">Cusco</option>
-            <option value="2">Puno</option>
+          <select class="form-select form-select-sm" name="departamento" aria-label="Selecciona un departamento" id="departamento" onchange="cargarProvincias()">
+            <option value="cusco">Cusco</option>
           </select>
         </div>
         <div class="col-4 form-1">
           <label for="provincia" class="form-label">Provincia</label>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm" id="provincia">
-            <option value="1">Cusco</option>
-            <option value="2">La convención</option>
-            <option value="2">Sicuani</option>
+          <select class="form-select form-select-sm" aria-label="Selecciona una provincia" id="provincia" onchange="cargarAgencias()">
+            <option value="">Seleccione una provincia</option>
           </select>
         </div>
         <div class="col-4 form-1">
           <label for="agencia" class="form-label">Agencia</label>
-          <select class="form-select form-select-sm" aria-label=".form-select-sm" id="agencia">
-            <option value="1">Cusco</option>
-            <option value="2">Wanchaq</option>
-            <option value="3">San jeronimo</option>
+          <select class="form-select form-select-sm" aria-label="Selecciona una agencia" id="agencia">
+            <option value="">Seleccione una agencia</option>
           </select>
         </div>
         <div class="col-12 form-1">
           <label for="textarea">Comentarios</label>
-          <textarea class="form-control" name="comentario" placeholder="Escribe tu reclamo aquí" id="textarea"
-            style="height: 100px"></textarea>
+          <textarea class="form-control" name="comentario" placeholder="Escribe tu reclamo aquí" id="textarea" style="height: 100px"></textarea>
           <input type="hidden" name="_captcha" value="false" />
         </div>
         <div class="col-12 text-center">
@@ -87,13 +75,11 @@
         </div>
         <div class="col-6 form-1">
           <label for="name-asesor" class="form-label">Nombre del asesor</label>
-          <input type="text" name="asesor" class="form-control" placeholder="Nombre de el asesor acusado"
-            aria-label="name-asesor" id="asesor" />
+          <input type="text" name="asesor" class="form-control" placeholder="Nombre de el asesor acusado" aria-label="name-asesor" id="asesor" />
         </div>
         <div class="col-6 form-1">
           <label for="banco" class="form-label">Nombre del Banco</label>
-          <input type="text" name="asesor" class="form-control" placeholder="Nombre del Banco al que pertenece"
-            aria-label="banco" id="banco" />
+          <input type="text" name="banco" class="form-control" placeholder="Nombre del Banco al que pertenece" aria-label="banco" id="banco" />
         </div>
         <div class="col-7 form-1">
           <label for="formFile" class="form-label">Información que veas relevante al reclamo</label>
@@ -109,17 +95,17 @@
     <div class="col-6">
       <div class="container text-start reclamos">
         <p>
-          Conforme a lo estabelcido en Código de Protección al Consumidor este
+          Conforme a lo establecido en Código de Protección al Consumidor este
           establecimiento cuenta con un Libro de Reclamaciones Virtual a tu
           disposición. Solicítalo para registrar una queja o reclamo.
         </p>
-        <h4>¿Que es un Reclamo?</h4>
+        <h4>¿Qué es un Reclamo?</h4>
         <p>
           Es la comunicación que puedes establecer con nosotros ante una posible
           insatisfacción o disconformidad con un producto o servicio prestado
           por el banco, con la finalidad de que éstos sean solucionados.
         </p>
-        <h4>¿Como registrar un reclamo?</h4>
+        <h4>¿Cómo registrar un reclamo?</h4>
         <ul class="lista">
           <li>
             <span>Personalmente: </span>Visitando cualquiera de nuestras
@@ -145,7 +131,7 @@
         <p>
           Transcurrido el plazo la entidad tiene la obligación de tomar contacto
           con usted de manera escrita o utilizando el mismo canal de
-          comunicación con el que presento su reclamo.
+          comunicación con el que presentó su reclamo.
         </p>
         <p>La respuesta que recibirás de la institución debe ser:</p>
         <ul class="lista">
@@ -195,3 +181,68 @@
   </div>
 </section>
 <app-footer></app-footer>
+
+<script>
+  // Provincias por departamento
+  const provincias = {
+    cusco: ["Acomayo", "Anta", "Calca", "Canas", "Canchis", "Chumbivilcas", "Cusco", "Espinar", "La Convención", "Paruro", "Paucartambo", "Quispicanchi", "Urubamba"]
+  };
+
+  // Agencias por provincia
+  const agencias = {
+    "Acomayo": ["Acomayo", "Acopia", "Pomacanchi", "Rondocan"],
+    "Anta": ["Anta", "Huarocondo", "Limatambo", "Zurite"],
+    "Calca": ["Calca", "Coya", "Lamay", "Pisac"],
+    "Canas": ["Yanaoca", "Checca", "Langui", "Layo"],
+    "Canchis": ["Sicuani", "Combapata", "Checacupe", "Marangani"],
+    "Chumbivilcas": ["Santo Tomás", "Capacmarca", "Colquemarca", "Velille"],
+    "Cusco": ["Cusco", "San Jerónimo", "San Sebastián", "Santiago"],
+    "Espinar": ["Yauri", "Coporaque", "Condoroma", "Pichigua"],
+    "La Convención": ["Quillabamba", "Echarati", "Maranura", "Santa Ana"],
+    "Paruro": ["Paruro", "Accha", "Ccatca", "Paccaritambo"],
+    "Paucartambo": ["Paucartambo", "Caicay", "Colquepata", "Huancarani"],
+    "Quispicanchi": ["Urcos", "Andahuaylillas", "Ocongate", "Huaro"],
+    "Urubamba": ["Urubamba", "Chinchero", "Huayllabamba", "Maras"]
+  };
+
+  function cargarProvincias() {
+    const departamento = document.getElementById("departamento").value;
+    const provinciaSelect = document.getElementById("provincia");
+    const agenciaSelect = document.getElementById("agencia");
+
+    // Clear previous options
+    provinciaSelect.innerHTML = '<option value="">Seleccione una provincia</option>';
+    agenciaSelect.innerHTML = '<option value="">Seleccione una agencia</option>';
+
+    if (provincias[departamento]) {
+      provincias[departamento].forEach(provincia => {
+        const option = document.createElement("option");
+        option.value = provincia;
+        option.text = provincia;
+        provinciaSelect.appendChild(option);
+      });
+    }
+  }
+
+  function cargarAgencias() {
+    const provincia = document.getElementById("provincia").value;
+    const agenciaSelect = document.getElementById("agencia");
+
+    // Clear previous options
+    agenciaSelect.innerHTML = '<option value="">Seleccione una agencia</option>';
+
+    if (agencias[provincia]) {
+      agencias[provincia].forEach(agencia => {
+        const option = document.createElement("option");
+        option.value = agencia;
+        option.text = agencia;
+        agenciaSelect.appendChild(option);
+      });
+    }
+  }
+
+  // Call cargarProvincias on page load to populate provinces for the preselected department
+  window.onload = function() {
+    cargarProvincias();
+  };
+</script>
